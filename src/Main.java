@@ -10,9 +10,27 @@ public class Main{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вводимые значения могут быть только целочисленными.");
-        System.out.print("Введите параметры точек (X, Y):");
+
+        System.out.print("Введите параметры точек через пробел (X, Y):");
         int X = scanner.nextInt();
         int Y = scanner.nextInt();
-        System.out.print(Y);
+
+        System.out.print("Введите параметры точек для линии через пробел (X1 Y1 X2 Y2)");
+        int X1 = scanner.nextInt();
+        int Y1 = scanner.nextInt();
+        int X2 = scanner.nextInt();
+        int Y2 = scanner.nextInt();
+
+        System.out.print("Введите параметры круга через пробел (X, Y, R)");
+        int X3 = scanner.nextInt();
+        int Y3 = scanner.nextInt();
+        float R = scanner.nextFloat();
+
+        System.out.print("Введите параметры прямоугольника через пробел (X3, Y3, X4, Y4)");
+        int X4 = scanner.nextInt();
+        int Y4 = scanner.nextInt();
+        int X5 = scanner.nextInt();
+        int Y5 = scanner.nextInt();
+        scanner.close();
     }
 }
