@@ -54,15 +54,32 @@ public class Main{
             else System.out.println("Точка ниже линии.");
         }
 
-        int XDelta = (X - X3);
-        int YDelta = (Y - Y3);
-        double Hypotenuse = Math.sqrt(Math.pow(XDelta,2) + Math.pow(YDelta,2));
+        int XCathet = (X - X3);
+        int YCathet = (Y - Y3);
+        double Hypotenuse = Math.sqrt(Math.pow(XCathet,2) + Math.pow(YCathet,2));
+
         if (Hypotenuse == R)
             System.out.println("Точка принадлежит кругу.");
         if (Hypotenuse > R)
             System.out.println("Точка за пределами кругу.");
         if (Hypotenuse < R)
             System.out.println("Точка внутри кругу.");
+
+        int X_Max = Math.max(X4, X5);
+        int Y_Max = Math.max(Y4, Y5);
+        int X_Min = Math.min(X4, X5);
+        int Y_Min = Math.min(Y4, Y5);
+
+        if (X > X_Max)
+            System.out.println("Точка правее прямоугольника");
+        else if (X < X_Min)
+            System.out.println("Точка левее прямоугольника");
+        if (Y > Y_Max)
+            System.out.println("Точка над прямоугольником");
+        else if (Y < Y_Min)
+            System.out.println("Точка под прямоугольником");
+        if ((X < X_Max) && (X > X_Min) && (Y < Y_Max) && (Y > Y_Min))
+            System.out.println("Точка в прямоугольнике");
     }
 
     }
