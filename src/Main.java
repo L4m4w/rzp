@@ -41,18 +41,28 @@ public class Main{
                 else System.out.print("Точка под линией.");
             if (Y1 == Y2)
                 if (Y > Y1)
-                    System.out.println("Точка правее прямой");
-                else System.out.println("Точка левее прямой");
+                    System.out.println("Точка правее линии.");
+                else System.out.println("Точка левее линии.");
         }
         else {
             float Xp = (float) (X - X1) / (X2 - X1);
             float Yp = (float) (Y - Y1) / (Y2 - Y1);
             if (Xp == Yp)
-                System.out.println("Точка принадлежит прямой");
+                System.out.println("Точка принадлежит линии.");
             else if (Xp < Yp)
-                System.out.println("Точка выше линии");
-            else System.out.println("Точка ниже линии");
+                System.out.println("Точка выше линии.");
+            else System.out.println("Точка ниже линии.");
         }
+
+        int XDelta = (X - X3);
+        int YDelta = (Y - Y3);
+        double Hypotenuse = Math.sqrt(Math.pow(XDelta,2) + Math.pow(YDelta,2));
+        if (Hypotenuse == R)
+            System.out.println("Точка принадлежит кругу.");
+        if (Hypotenuse > R)
+            System.out.println("Точка за пределами кругу.");
+        if (Hypotenuse < R)
+            System.out.println("Точка внутри кругу.");
     }
 
     }
