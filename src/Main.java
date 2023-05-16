@@ -31,6 +31,28 @@ public class Main{
         int Y4 = scanner.nextInt();
         int X5 = scanner.nextInt();
         int Y5 = scanner.nextInt();
+
         scanner.close();
+
+        if ((X1 == X2) | (Y1 == Y2)) {
+            if (X1 == X2)
+                if (X > X1)
+                    System.out.print("Точка над линии.");
+                else System.out.print("Точка под линией.");
+            if (Y1 == Y2)
+                if (Y > Y1)
+                    System.out.println("Точка правее прямой");
+                else System.out.println("Точка левее прямой");
+        }
+        else {
+            float Xp = (float) (X - X1) / (X2 - X1);
+            float Yp = (float) (Y - Y1) / (Y2 - Y1);
+            if (Xp == Yp)
+                System.out.println("Точка принадлежит прямой");
+            else if (Xp < Yp)
+                System.out.println("Точка выше линии");
+            else System.out.println("Точка ниже линии");
+        }
     }
-}
+
+    }
